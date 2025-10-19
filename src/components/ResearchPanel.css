@@ -1,0 +1,183 @@
+.research-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  margin: 1.5rem auto 3rem;
+  max-width: 930px; 
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.research-panel h2 {
+  color: #00bfa6;  
+  margin: 0 0 1.2rem 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: center;  
+  letter-spacing: 0.3px;
+  text-transform: uppercase; 
+}
+
+
+.research-card {
+  background: rgba(255, 255, 255, 0.08); 
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem; 
+  margin-bottom: 1.4rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.research-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.research-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expand-icon {
+  font-size: 1.1rem;
+  color: #00bfa6;
+  opacity: 0.85;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.expand-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.research-title h3 {
+  color: #eaeaea;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.research-meta {
+  display: inline; 
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #aaa;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.meta-left {
+  font-family: "Poppins", sans-serif; 
+  font-weight: 600; 
+  color: #eaeaea; 
+  margin-right: 0.5rem; 
+}
+
+.meta-right {
+  font-style: italic;  
+  color: #ccc; 
+  white-space: nowrap;  
+}
+
+.research-points {
+  list-style: none;
+  padding: 0.5rem 0 0 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.research-card.open .research-points {
+  max-height: 800px;
+  opacity: 1;
+}
+
+.research-points li {
+  position: relative;
+  margin: 0.45rem 0;
+  padding-left: 1.2rem;
+  color: #d0d0d0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  font-family: "Inter", system-ui, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.research-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00bfa6;
+  box-shadow: 0 0 6px rgba(0, 191, 166, 0.6);
+}
+
+.research-points li:hover {
+  color: #00bfa6;
+}
+
+@media (max-width: 900px) {
+  .research-panel {
+    max-width: 100%;
+    padding: 1.8rem;
+  }
+
+  .research-panel h2 {
+    font-size: 1.5rem;
+  }
+
+  .research-meta {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .research-points li {
+    font-size: 0.95rem;
+  }
+}
+
+.research-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-family: "Inter", sans-serif;
+  color: #00bfa6;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid #00bfa6;
+  padding: 0.4rem 1rem; 
+  border-radius: 6px;  
+  transition: all 0.3s ease;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;  
+}
+
+.research-link:hover {
+  background-color: #00bfa6;
+  color: #0a0a0a;
+  box-shadow: 0 0 8px rgba(0, 191, 166, 0.5); 
+  transform: translateY(-2px);
+}
+
+.research-link:active {
+  transform: translateY(0);
+  box-shadow: 0 0 4px rgba(0, 191, 166, 0.3); 
+}
