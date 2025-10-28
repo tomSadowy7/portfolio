@@ -30,7 +30,7 @@ export default function ProjectsPanel() {
       title: "TigerMarket",
       dates: "Dec 2024 - Present",
       description:
-        "Developed a full-stack university marketplace with real-time buyer-seller chat, semantic product search via vector embeddings, and AI-powered image classification that auto-categorizes listings to streamline post creation (official release still pending)",
+        "Developed a full-stack university marketplace with real-time buyer-seller chat, semantic product search via vector embeddings, and AI-powered image classification that auto-categorizes listings to streamline post creation (official release still pending).",
       tech: ["Microsoft Azure", "React", "Node.js", "Express", "JavaScript", "PostgreSQL", "Prisma"],
       image: project3,
       link: "https://tigermarket-f7555a069d76.herokuapp.com/",
@@ -92,15 +92,21 @@ export default function ProjectsPanel() {
                     GitHub
                   </a>
                 )}
-                {p.link && (
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-btn learn"
-                  >
-                    Website Link
-                  </a>
+                {p.title === "TigerMarket" ? (
+                  <span className="project-btn learn disabled">
+                    Website Link Coming Soon With Release
+                  </span>
+                ) : (
+                  p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-btn learn"
+                    >
+                      Website Link
+                    </a>
+                  )
                 )}
               </div>
             </div>
