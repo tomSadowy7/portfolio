@@ -31,8 +31,7 @@ export default function ResearchPanel() {
               learning training in robotics via controlled scene generation
             </li>
             <li>
-              Targeting <strong>CVPR 2026</strong> publication (submission Fall
-              2025).
+              Targeting <strong>RSS 2026</strong> publication.
             </li>
           </ul>
         )}
